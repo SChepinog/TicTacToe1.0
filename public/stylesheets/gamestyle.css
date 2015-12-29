@@ -9,7 +9,11 @@ table {
 	margin-top: 50px;
 }
 
+tr {
+}
+
 td {
+	display: inline-block;
 	border: solid;
 	height: 100px;
 	width: 100px;

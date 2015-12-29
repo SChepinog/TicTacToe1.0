@@ -59,12 +59,19 @@ function serveStatic(response, cache, absPath) {
     }
 }
 
+require('dns').lookup(require('os').hostname(), function (err, add, fam) {
+    console.log('addr: '+add);
+    var addr = add.toString();
+    console.log(addr);
+})
+
+
 //server creation
 var server = http.createServer(function(request, response) {
     var filePath = false;
     if (request.url == '/') {  //show a link for new users
         response.writeHead(200, {"Content-Type": "text/plain"});
-        response.write("Please, go here and send this link to the second player: \n \n http://localhost:3000/game=" + gameIndex);
+        response.write("Please, go here and send this link to the second player: \n \n http://localhost:3000/game=" + gameIndex);  //" + addr + "/game=" + gameIndex);  //
         gameIndex ++;
         response.end();
     } else if (request.url.indexOf("/game=") == 0 ) {
