@@ -1,0 +1,37 @@
+body {
+	padding: 50px;
+	font: 14px "Lucide Grande", Helvetica, Arial, sans-serif;
+}
+
+table {
+	background-color: #E2BE22;
+	border-collapse: collapse;
+	margin-top: 50px;
+}
+
+td {
+	border: solid;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	}
+
+p {
+	display: none;
+	text-align: center;
+	font-size: 50px;
+}
+
+.container {
+	display: inline-block;
+}
+
+#game {
+	margin-top: 50px;
+}
+
+td div {
+	font-size: 100px;
+	text-align: center;
+	vertical-align: -5px;
+}
