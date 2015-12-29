@@ -21,7 +21,6 @@ Game.prototype.sendStep = function(step) {
     var myStep = {
         step: step
     };
-    //this.socket.emit('step', step);
     this.socket.emit('message', myStep.step);
     mySteps.push(step);
     console.log("mySteps is "+ mySteps);
